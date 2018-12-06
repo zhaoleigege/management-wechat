@@ -1,0 +1,65 @@
+<view class="page">
+
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+
+    <view class="weui-cells weui-cells_after-title" wx:if="{{showPhone}}">
+      <view class="weui-cell weui-cell_input weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">联系手机</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入手机号码" bindinput='setPhone'/>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title" wx:if="{{showClassroom}}">
+      <view class="weui-cell weui-cell_input weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">教室</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入教室" bindinput='setClassroom'/>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="添加描述" style="height: 6em" bindinput='setDescription' />
+          <view class="weui-textarea-counter"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">图片上传</view>
+              <view class="weui-uploader__info">{{files.length}}/3</view>
+            </view>
+            <view class="weui-uploader__bd">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+              <view class="weui-uploader__input-box" wx:if="{{uploadMore}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="stuffSubmit">确定</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "失物信息发布",
+  "usingComponents": {
+    "stuff": "/components/stuff/stuff"
+  }
+}

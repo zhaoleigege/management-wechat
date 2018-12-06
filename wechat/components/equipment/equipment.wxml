@@ -1,0 +1,26 @@
+<view class="weui-form-preview">
+  <view class="weui-form-preview__bd">
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__value" style='text-align: left;color: black;'>{{description}}</view>
+    </view>
+   <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">报修人</view>
+      <view class="weui-form-preview__value">{{reportNumber}}</view>
+    </view>
+    <view class="weui-form-preview__item" wx:if="{{repairNumber}}">
+      <view class="weui-form-preview__label">维修人</view>
+      <view class="weui-form-preview__value">{{repairNumber}}</view>
+    </view>
+    <view class="weui-form-preview__item" wx:if="{{classroom}}">
+      <view class="weui-form-preview__label">教室</view>
+      <view class="weui-form-preview__value">{{classroom}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">时间</view>
+      <view class="weui-form-preview__value">{{updateTime}}</view>
+    </view>
+  </view>
+  <view class="weui-form-preview__ft">
+    <view bindtap="lookup" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">查看</view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+    <view class="weui-tab">
+
+      <view class="page">
+        <view class="page__bd">
+          <view class="page" wx:if="{{classrooms.length}}">
+            <view class="page__bd">
+              <classroom wx:for="{{classrooms}}" wx:key="id" number="{{item.number}}" day="{{item.day}}" time="{{item.time}}" classroom="{{item.classroom}}" reason="{{item.reason}}" createTime="{{item.createTime}}" apply="{{item.apply}}" data-index="{{ item.applyId }}" status="{{item.status}}" bindrefuseSubmit="refuseAction" bindacceptSubmit="acceptAction">
+              </classroom>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+    <view class="weui-tab">
+
+      <view class="page">
+        <view class="page__bd">
+          <view class="page" wx:if="{{courses.length}}">
+            <view class="page__bd">
+              <course wx:for="{{courses}}" wx:key="id" courseName="{{item.courseName}}" classroom="{{item.classroom}}" teacher="{{item.teacher}}" time="{{item.time}}">
+              </course>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

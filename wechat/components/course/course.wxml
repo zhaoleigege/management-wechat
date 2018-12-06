@@ -1,0 +1,19 @@
+<view class="weui-form-preview">
+  <view class="weui-form-preview__bd">
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__value" style='text-align: left;color: black;'>{{courseName}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">教室</view>
+      <view class="weui-form-preview__value">{{classroom}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">老师</view>
+      <view class="weui-form-preview__value">{{teacher}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">上课时间</view>
+      <view class="weui-form-preview__value">{{time}}</view>
+    </view>
+  </view>
+</view>

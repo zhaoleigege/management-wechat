@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+    <view class="weui-tab">
+
+      <view class="page">
+        <view class="page__bd">
+          <view class="page" wx:if="{{maintains.length}}">
+            <view class="page__bd">
+              <equipment wx:for="{{maintains}}" wx:key="id" description="{{item.description}}" classroom="{{item.classroom}}" reportNumber="{{item.reportNumber}}" updateTime="{{item.updateTime}}" data-index="{{ item.maintainId }}" bindlookup="previewLookUp">
+              </equipment>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

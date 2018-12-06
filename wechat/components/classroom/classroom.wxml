@@ -1,0 +1,39 @@
+<view class="weui-form-preview">
+  <view class="weui-form-preview__bd">
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__value" style='text-align: left;color: black;'>{{reason}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">教室</view>
+      <view class="weui-form-preview__value">{{classroom}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">日期</view>
+      <view class="weui-form-preview__value">{{day}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">时间段</view>
+      <view class="weui-form-preview__value">{{time}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">申请时间</view>
+      <view class="weui-form-preview__value">{{createTime}}</view>
+    </view>
+    <view class="weui-form-preview__item">
+      <view class="weui-form-preview__label">申请人</view>
+      <view class="weui-form-preview__value">{{number}}</view>
+    </view>
+  </view>
+  <view class="weui-form-preview__ft" wx:if="{{apply}}">
+    <view class="weui-form-preview__btn" style='color: {{color}}'>{{content}}</view>
+  </view>
+  <view class="weui-flex" style='border-top:1rpx solid #d5d5d6;' wx:else>
+    <view class="weui-flex__item">
+      <button bindtap="acceptSubmit" class="weui-btn" type="primary" plain="true" style='border: 0px; border-right:1px solid #d5d5d6;border-radius:0px;'>同意</button>
+    </view>
+    <view class="weui-flex__item">
+      <button bindtap="refuseSubmit" class="weui-btn" type="warn" plain="true" style='border: 0px;'>拒绝</button>
+    </view>
+  </view>
+
+</view>

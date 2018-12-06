@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+       
+        <view class="weui-tab__content">
+          <stuff bindstuffSubmit="maintainSubmit" showPhone="{{false}}" showClassroom="{{true}}">
+          </stuff>
+        </view>
+
+    </view>
+  </view>
+</view>

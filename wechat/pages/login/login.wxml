@@ -1,0 +1,21 @@
+<view class="page main" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="学号" bindinput='setUsername'/>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input type='password' class="weui-input" placeholder="密码" bindinput='setPassword'/>
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

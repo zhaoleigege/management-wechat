@@ -1,0 +1,73 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">发布人</view>
+        <view class="weui-cell__ft" style="font-size: 0">
+          <view style="display: inline-block;vertical-align:middle; font-size: 17px;">{{number}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title" >
+      <view class="weui-cell weui-cell_access" wx:if="{{type}}">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">类型</view>
+        </view>
+        <view class="weui-cell__ft">{{type}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access" wx:if="{{classroom}}">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">教室</view>
+        </view>
+        <view class="weui-cell__ft">{{classroom}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access" wx:if="{{phone}}">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">联系方式</view>
+        </view>
+        <view class="weui-cell__ft">{{phone}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">时间</view>
+        </view>
+        <view class="weui-cell__ft">{{time}}</view>
+      </view>
+    </view>
+
+    <view class="page__bd">
+      <view class="weui-article">
+        <view class="weui-article__section">
+          <view class="weui-article__section">
+            <view class="weui-article__h3">描述</view>
+            <view class="weui-article__p">
+              {{description}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells">
+              <view class="weui-cell">
+                <view class="weui-cell__bd">
+                  <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                      <view class="weui-uploader__title">图片查看</view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                      <block wx:for="{{files}}" wx:key="*this">
+                        <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                        </view>
+                      </block>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+  </view>
+</view>

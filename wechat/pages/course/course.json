@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "课程信息查看",
+  "usingComponents": {
+    "course": "/components/course/course"
+  }
+}

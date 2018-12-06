@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="page__bd">
+   <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="page" wx:if="{{losses.length}}">
+            <view class="page__bd">
+              <preview wx:for="{{losses}}" wx:key="id" description="{{item.description}}" phone="{{item.phone}}" number="{{item.number}}" time="{{item.createTime}}" data-index="{{ item.stuffId }}" bindlookup="previewLookUp">
+              </preview>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="page">
+            <view class="page__bd">
+               <view class="page" wx:if="{{losses.length}}">
+            <view class="page__bd">
+              <preview wx:for="{{stickes}}" wx:key="id" description="{{item.description}}" phone="{{item.phone}}" number="{{item.number}}" time="{{item.createTime}}" data-index="{{ item.stuffId }}" bindlookup="previewLookUp">
+              </preview>
+            </view>
+          </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

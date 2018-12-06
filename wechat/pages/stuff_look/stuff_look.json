@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "失物信息查看",
+  "usingComponents": {
+    "preview": "/components/preview/preview"
+  }
+}

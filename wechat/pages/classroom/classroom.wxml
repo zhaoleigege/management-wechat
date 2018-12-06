@@ -1,0 +1,63 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+
+    <view class="weui-cells weui-cells_after-title">
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindDateChange" value="{{dateIndex}}" range="{{dates}}">
+            <view class="weui-select weui-select_in-select-after">{{dates[dateIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">时间段</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindTimeChange" value="{{timeIndex}}" range="{{times}}">
+            <view class="weui-select weui-select_in-select-after">{{times[timeIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="checkupClassroom">查询</button>
+    </view>
+
+    <view wx:if="{{showApply}}">
+      <view class="weui-cells">
+
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__bd">
+              <picker bindchange="bindClassroomChange" value="{{nameIndex}}" range="{{names}}">
+                <view class="weui-select">{{names[nameIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">借用事由</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea bindinput='reasonInput' class="weui-textarea" placeholder="请说明借用理由" style="height: 3.3em" />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="applySubmit">申请</button>
+      </view>
+    </view>
+  </view>
+</view>

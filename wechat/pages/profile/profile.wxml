@@ -1,0 +1,108 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">姓名</view>
+        <view class="weui-cell__ft" style="font-size: 0">
+          <view style="display: inline-block;vertical-align:middle; font-size: 17px;">{{name}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">学号</view>
+        </view>
+        <view class="weui-cell__ft">{{number}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">身份</view>
+        </view>
+        <view class="weui-cell__ft">{{identity}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">学院</view>
+        </view>
+        <view class="weui-cell__ft">{{xy}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">行政班</view>
+        </view>
+        <view class="weui-cell__ft">{{xzb}}</view>
+      </view>
+    </view>
+
+    <view class="page__bd">
+      <view class="weui-cells__title"></view>
+
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/stuff/stuff" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">找寻失物</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/stuff_look/stuff_look" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">失物信息查看</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/course/course" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">课程信息查看</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/maintain/maintain?type=report&title=设备报修" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">设备报修</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/maintain/maintain?type=maintain&title=设备维护" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">设备维护</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/maintain_look/maintain_look?status=repairing&title=设备维修" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">设备维修</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/maintain_look/maintain_look?status=repaired&title=设备维修记录" class="weui-cell weui-cell_access" wx:if="{{repairCondition}}">
+          <view class="weui-cell__bd">设备维修记录</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/classroom/classroom" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">教室申请</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/classroom_look/classroom_look?" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">教室审批</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+        <navigator url="/pages/classroom_look/classroom_look?type=check" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">教室申请状态</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+          </view>
+        </navigator>
+
+      </view>
+
+    </view>
+  </view>
+</view>
